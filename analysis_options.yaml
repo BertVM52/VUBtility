@@ -24,6 +24,37 @@ linter:
   rules:
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+    sort_constructors_first: true
+
+    prefer_single_quotes: true
+
+    always_specify_types: true
+
+    lines_longer_than_80_chars: false
+
+    always_put_required_named_parameters_first: false
+
+    camel_case_types: true
+
+    library_names: true
+
+    avoid_positional_boolean_parameters: false
+
+    sized_box_for_whitespace: false
+
+    no_logic_in_create_state: true
+
+    file_names: false
+
+    avoid_empty_else: true
+
+    avoid_slow_async_io: true
+
+    avoid_print: false
+
+    use_build_context_synchronously: false
+
+    require_trailing_commas: false
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

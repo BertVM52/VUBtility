@@ -20,8 +20,11 @@ class AppTheme {
     backgroundColor: bgColorLight,
 
     // input fields
-    inputDecorationTheme: const InputDecorationTheme(
-      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: primaryColor, width: 2)),
+    inputDecorationTheme: InputDecorationTheme(
+      border: OutlineInputBorder(
+        borderSide: BorderSide(color: primaryColor.withOpacity(0.1), width: 5.0),
+        borderRadius: BorderRadius.circular(12.0),
+      ),
     ),
 
     // text theme
@@ -58,8 +61,11 @@ class AppTheme {
     backgroundColor: bgColorDark,
 
     // input fields
-    inputDecorationTheme: const InputDecorationTheme(
-      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: primaryColor, width: 2)),
+    inputDecorationTheme: InputDecorationTheme(
+      border: OutlineInputBorder(
+        borderSide: BorderSide(color: primaryColor.withOpacity(0.1), width: 5.0),
+        borderRadius: BorderRadius.circular(12),
+      ),
     ),
 
     // text theme
