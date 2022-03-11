@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vubtility/constants/constants.dart';
+import 'package:vubtility/pages/page_calendar.dart';
 import 'package:vubtility/theme/app_colors.dart';
 
 class LoginPage extends StatefulWidget {
@@ -37,13 +38,13 @@ class _LoginPageState extends State<LoginPage> {
 
         sizedBoxheight,
 
-        const Text('Lessenrooster App', style: TextStyle(fontWeight: FontWeight.w600)),
+        const Text('Lessenrooster', style: TextStyle(fontWeight: FontWeight.w600)),
         const Text('Academiejaar 2021 - 2022', style: TextStyle(fontWeight: FontWeight.w300))
       ],
     );
   }
 
-  Column inputfields() {
+  Column inputFields() {
     return Column(
       children: <Widget>[
         usernameField(),
@@ -88,7 +89,9 @@ class _LoginPageState extends State<LoginPage> {
   Widget loginButton() {
     return InkWell(
         borderRadius: const BorderRadius.all(Radius.circular(defaultPadding)),
-        onTap: () {},
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute<CalendarPage>(builder: (BuildContext context) => const CalendarPage()));
+        },
         child: Container(
             width: 150,
             height: 36,
@@ -131,7 +134,7 @@ class _LoginPageState extends State<LoginPage> {
 
         loginPageTitleWidget(),
 
-        inputfields(),
+        inputFields(),
 
         loginButton(),
 
