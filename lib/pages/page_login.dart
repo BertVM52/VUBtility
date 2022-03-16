@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
             color: Theme.of(context).primaryTextTheme.bodyText1?.color
         ),
 
-        sizedBoxheight,
+        sizedBoxHeight,
 
         const Text('Lessenrooster', style: TextStyle(fontWeight: FontWeight.w600)),
         const Text('Academiejaar 2021 - 2022', style: TextStyle(fontWeight: FontWeight.w300))
@@ -150,7 +150,7 @@ class _LoginPageState extends State<LoginPage> {
         Column(
             children: <Widget>[
               loginButton(),
-              sizedBoxheight,
+              sizedBoxHeight,
               skipButton()
             ]
         ),
