@@ -15,7 +15,6 @@ class _ManualEntryPageState extends State<ManualEntryPage> {
   @override
   void initState() {
     super.initState();
-
   }
 
   @override

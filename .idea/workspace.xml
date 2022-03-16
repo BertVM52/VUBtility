@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab0afd28-506b-4a4f-ba98-61f137cfc2e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/database/db.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/page_manual_entry.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/lessenrooster_datasource.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/vak.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/page_calendar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/page_calendar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/page_login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/page_login.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vubtility.iml" beforeDir="false" afterPath="$PROJECT_DIR$/vubtility.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/page_manual_entry.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/page_manual_entry.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
