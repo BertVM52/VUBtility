@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vubtility/constants/constants.dart';
 import 'package:vubtility/pages/page_calendar.dart';
+import 'package:vubtility/pages/page_manual_entry.dart';
 import 'package:vubtility/theme/app_colors.dart';
 
 class LoginPage extends StatefulWidget {
@@ -60,11 +61,11 @@ class _LoginPageState extends State<LoginPage> {
       padding: const EdgeInsets.symmetric(horizontal: defaultPadding*2),
       child: TextFormField(
         decoration: InputDecoration(
-          filled: true,
-          fillColor: primaryColor.withOpacity(0.1),
-          hintText: 'Username...',
-          hintStyle: const TextStyle(fontSize: 14, color: Colors.grey),
-          contentPadding: const EdgeInsets.only(left: defaultPadding)
+            filled: true,
+            fillColor: primaryColor.withOpacity(0.1),
+            hintText: 'Username...',
+            hintStyle: const TextStyle(fontSize: 14, color: Colors.grey),
+            contentPadding: const EdgeInsets.only(left: defaultPadding)
         ),
       ),
     );
@@ -76,11 +77,11 @@ class _LoginPageState extends State<LoginPage> {
       padding: const EdgeInsets.symmetric(horizontal: defaultPadding*2),
       child: TextFormField(
         decoration: InputDecoration(
-          filled: true,
-          fillColor: primaryColor.withOpacity(0.1),
-          hintText: 'Password...',
-          hintStyle: const TextStyle(fontSize: 14, color: Colors.grey),
-          contentPadding: const EdgeInsets.only(left: defaultPadding)
+            filled: true,
+            fillColor: primaryColor.withOpacity(0.1),
+            hintText: 'Password...',
+            hintStyle: const TextStyle(fontSize: 14, color: Colors.grey),
+            contentPadding: const EdgeInsets.only(left: defaultPadding)
         ),
       ),
     );
@@ -88,35 +89,45 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget loginButton() {
     return InkWell(
-        borderRadius: const BorderRadius.all(Radius.circular(defaultPadding)),
-        onTap: () {
-          Navigator.of(context).push(MaterialPageRoute<CalendarPage>(builder: (BuildContext context) => const CalendarPage()));
-        },
-        child: Container(
-            width: 150,
-            height: 36,
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: <Color>[
-                    secondaryColor.withOpacity(0.6),
-                    secondaryColor.withOpacity(0.6),
-                    secondaryColor.withOpacity(0.2)
-                  ],
-                ),
-                border: Border.all(color: secondaryColor, width: 1),
-                borderRadius: const BorderRadius.all(Radius.circular(defaultPadding))
-            ),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text('LOG IN', style: Theme.of(context).primaryTextTheme.bodyText1?.copyWith(fontSize: 14)),
-                  sizedBoxWidth,
-                  const Icon(Icons.arrow_forward_ios_rounded, size: 14)
-                ]
-            )
+      borderRadius: const BorderRadius.all(Radius.circular(defaultPadding)),
+      onTap: () => Navigator.of(context).push(MaterialPageRoute<CalendarPage>(builder: (BuildContext context) => const CalendarPage())),
+      child: Container(
+        width: 150,
+        height: 36,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: <Color>[
+              secondaryColor.withOpacity(0.6),
+              secondaryColor.withOpacity(0.6),
+              secondaryColor.withOpacity(0.2)
+            ],
+          ),
+          border: Border.all(color: secondaryColor, width: 1),
+          borderRadius: const BorderRadius.all(Radius.circular(defaultPadding))
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('LOG IN', style: Theme.of(context).primaryTextTheme.bodyText1?.copyWith(fontSize: 14)),
+            sizedBoxWidth,
+            const Icon(Icons.arrow_forward_ios_rounded, size: 14)
+          ]
         )
+      )
+    );
+  }
+
+  Widget skipButton() {
+    return InkWell(
+      onTap: () => Navigator.of(context).push(MaterialPageRoute<CalendarPage>(builder: (BuildContext context) => const ManualEntryPage())),
+      child: const Text('skip for now',
+        style: TextStyle(
+          fontStyle: FontStyle.italic,
+          decoration: TextDecoration.underline
+        )
+      ),
     );
   }
 
@@ -136,7 +147,13 @@ class _LoginPageState extends State<LoginPage> {
 
         inputFields(),
 
-        loginButton(),
+        Column(
+            children: <Widget>[
+              loginButton(),
+              sizedBoxheight,
+              skipButton()
+            ]
+        ),
 
         appVersionWidget()
 

@@ -26,13 +26,6 @@ class _CalendarPageState extends State<CalendarPage> {
     super.dispose();
   }
 
-  // void calendarTapped(CalendarTapDetails calendarTapDetails) {
-  //   if (_calendarController.view == CalendarView.month && calendarTapDetails.targetElement == CalendarElement.calendarCell) {
-  //     _calendarController.view = CalendarView.day;
-  //   } else if ((_calendarController.view == CalendarView.week || _calendarController.view == CalendarView.workWeek) && calendarTapDetails.targetElement == CalendarElement.viewHeader) {
-  //     _calendarController.view = CalendarView.day;
-  //   }
-  // }
 
 
   @override
@@ -54,7 +47,6 @@ class _CalendarPageState extends State<CalendarPage> {
       ),
       body: SfCalendar(
         controller: _calendarController,
-        // onTap: calendarTapped,
         view: CalendarView.workWeek,
         selectionDecoration: BoxDecoration(
           color: Colors.transparent,
